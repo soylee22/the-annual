@@ -1,0 +1,16 @@
+{
+  "symbol": "SNDK",
+  "name": "Sandisk",
+  "shares": 0.8481779,
+  "entry_price_usd": 1557.71,
+  "broker_average_price_usd": 1557.72,
+  "entry_at": "2026-10-12T10:47:00Z",
+  "entry_timezone": "Europe/London",
+  "entry_fx_usd_per_gbp": 1.32319999,
+  "capital_gbp": 1000,
+  "fx_fee_gbp": 1.50,
+  "invested_gbp": 998.50,
+  "stop_fraction": 0.35,
+  "execution_venue": "Broker OTC",
+  "evidence": "User trade confirmation, 12 October 2026. Fill price differs from rounded displayed average by one cent."
+}
