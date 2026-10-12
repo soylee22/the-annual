@@ -19,3 +19,11 @@ The frozen backtest replays supplied winner selections from 2005 to 9 October 20
 Editorial design references: [FT Visual Vocabulary](https://ft-interactive.github.io/visual-vocabulary-templates/), [Observable direct labels](https://old.observablehq.com/plot/marks/text), [Pentagram Igluu](https://www.pentagram.com/work/igluu). Original HTML, CSS and SVG chart implementation. Fonts are DM Serif Display, DM Sans and IBM Plex Mono, served by Google Fonts with local fallbacks.
 
 Run `python -m pytest tests -q` for accounting, baseline look-ahead, quote timestamps and endpoint checks. `scripts/export_backtest.py` freezes checked outputs in the SecondBrain workspace. It is not needed by the published refresh workflow.
+
+## Daily email
+
+`scripts/daily.py` composes a dated portfolio digest. Sending requires an explicit `--send` and `GMAIL_APP_PASSWORD`. It reports the actual GBP holding versus SPY, fixed entry stop, observed peak drawdown, the separate January model, year-end countdown and five provisional YTD candidates. Source timestamps and failures remain visible. A receipt suppresses successful reruns on the same London date.
+
+The dedicated `annual-daily.yml` workflow in `soylee22/lodestar` runs at 07:00 UTC on weekdays, using its existing protected Gmail credential. It checks out this public repository, runs tests, refreshes quotes and rankings, then sends as **The Annual**. This keeps the credential in its existing repository and leaves Lodestar's strategy and emails unchanged. This job does not publish or commit its temporary refreshed data. The separate Pages workflow continues to refresh the website. GitHub may delay scheduled runs. An SMTP acceptance confirms submission, not inbox delivery.
+
+Preview locally with `python scripts/daily.py`. Preview and receipt folders are ignored by Git. GitHub keeps a daily receipt cache and a rendered preview artifact. This is a daily digest, not an immediate stop alert or an order service.
