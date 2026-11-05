@@ -2,10 +2,29 @@
   "symbol": "SNDK",
   "name": "Sandisk",
   "shares": 0.0,
+  "entry_price_usd": 1557.71,
+  "broker_average_price_usd": 1557.72,
   "blended_entry_price_usd": 1360.46,
+  "entry_at": "2026-10-12T10:47:00Z",
+  "entry_timezone": "Europe/London",
+  "entry_fx_usd_per_gbp": 1.32319999,
+  "capital_gbp": 1000.0,
   "total_capital_gbp": 1831.78,
+  "invested_gbp": 998.5,
   "net_invested_gbp": 1827.04,
+  "fx_fee_gbp": 1.5,
+  "total_fee_gbp": 2.75,
   "total_shares_purchased": 1.79031071,
+  "stop_fraction": 0.35,
+  "execution_venue": "Broker OTC",
+  "evidence": "Trading 212 order confirmations across both tranches and final liquidation fill.",
+  "exit_price_usd": 998.05,
+  "exit_at": "2026-11-05T09:03:28Z",
+  "exit_cash_gbp": 626.97,
+  "realised_cash_gbp": 1323.36,
+  "realised_loss_gbp": -503.68,
+  "is_stopped": true,
+  "status": "STOPPED OUT · 100% IN CASH",
   "tranches": [
     {
       "id": 1,
@@ -29,14 +48,5 @@
       "invested_gbp": 830.53,
       "fee_gbp": 1.25
     }
-  ],
-  "stop_fraction": 0.35,
-  "execution_venue": "Broker OTC",
-  "evidence": "Trading 212 order confirmations across both tranches and final liquidation fill.",
-  "exit_price_usd": 998.05,
-  "exit_at": "2026-11-05T09:03:28Z",
-  "realised_cash_gbp": 1323.36,
-  "realised_loss_gbp": -503.68,
-  "is_stopped": true,
-  "status": "STOPPED OUT · 100% IN CASH"
+  ]
 }

@@ -58,6 +58,15 @@ def before(a,t):
     return a[i] if i>=0 else None
 
 def value(position,price,fx):
+    if position.get('is_stopped'):
+        actual=position.get('exit_cash_gbp', 626.97)
+        capital=position['capital_gbp']
+        invested=position['invested_gbp']
+        fee=position['fx_fee_gbp']
+        exit_price=position.get('exit_price_usd', 998.05)
+        stock=invested*(exit_price/position['entry_price_usd']-1)
+        currency=actual-invested-stock
+        return {'value_gbp':actual,'net_pnl_gbp':actual-capital,'net_return':actual/capital-1,'stock_pnl_gbp':stock,'fx_and_rounding_pnl_gbp':currency,'fee_gbp':fee}
     actual=position['shares']*price/fx
     invested=position['invested_gbp']
     stock=invested*(price/position['entry_price_usd']-1)

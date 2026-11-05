@@ -11,6 +11,13 @@ def test_confirmed_fill_and_fee_reconcile():
  assert v['net_pnl_gbp']==pytest.approx(-1.49999502,abs=.0001)
  assert P['entry_price_usd']*.65==pytest.approx(1012.5115)
  assert v['stock_pnl_gbp']+v['fx_and_rounding_pnl_gbp']-1.5==pytest.approx(v['net_pnl_gbp'])
+def test_stopped_position_values_as_cash():
+ stopped={**P,'is_stopped':True,'shares':0.0,'exit_cash_gbp':626.97,'exit_price_usd':998.05}
+ v=r.value(stopped,1000,1.34)
+ assert v['value_gbp']==626.97
+ assert v['net_pnl_gbp']==pytest.approx(-373.03)
+ assert v['net_return']==pytest.approx(-0.37303)
+ assert v['stock_pnl_gbp']+v['fx_and_rounding_pnl_gbp']-1.5==pytest.approx(v['net_pnl_gbp'])
 def test_fx_is_not_ignored():
  assert r.value(P,1557.71,1.4)['value_gbp']<r.value(P,1557.71,1.3)['value_gbp']
 def test_benchmark_uses_completed_bar_without_future_price():
