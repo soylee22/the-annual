@@ -2,21 +2,41 @@
   "symbol": "SNDK",
   "name": "Sandisk",
   "shares": 0.0,
-  "entry_price_usd": 1557.71,
-  "broker_average_price_usd": 1557.72,
-  "entry_at": "2026-10-12T10:47:00Z",
-  "entry_timezone": "Europe/London",
-  "entry_fx_usd_per_gbp": 1.32319999,
-  "capital_gbp": 1000,
-  "fx_fee_gbp": 1.5,
-  "invested_gbp": 998.5,
+  "blended_entry_price_usd": 1360.46,
+  "total_capital_gbp": 1831.78,
+  "net_invested_gbp": 1827.04,
+  "total_shares_purchased": 1.79031071,
+  "tranches": [
+    {
+      "id": 1,
+      "date": "2026-10-12T10:47:00Z",
+      "shares": 0.8481779,
+      "price_usd": 1557.71,
+      "fx_rate": 1.32319999,
+      "capital_gbp": 1000.0,
+      "invested_gbp": 998.5,
+      "fee_gbp": 1.5
+    },
+    {
+      "id": 2,
+      "date": "2026-11-02T08:26:50Z",
+      "order_id": 59802688463,
+      "fill_id": 59802688467,
+      "shares": 0.94213281,
+      "price_usd": 1182.88,
+      "fx_rate": 1.34182998,
+      "capital_gbp": 831.78,
+      "invested_gbp": 830.53,
+      "fee_gbp": 1.25
+    }
+  ],
   "stop_fraction": 0.35,
   "execution_venue": "Broker OTC",
-  "evidence": "User trade confirmation, 12 October 2026. Fill price differs from rounded displayed average by one cent.",
+  "evidence": "Trading 212 order confirmations across both tranches and final liquidation fill.",
   "exit_price_usd": 998.05,
   "exit_at": "2026-11-05T09:03:28Z",
   "realised_cash_gbp": 1323.36,
   "realised_loss_gbp": -503.68,
   "is_stopped": true,
-  "status": "STOPPED OUT \u00b7 100% IN CASH"
+  "status": "STOPPED OUT · 100% IN CASH"
 }
